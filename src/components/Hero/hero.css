@@ -1,0 +1,78 @@
+.hero-wrapper {
+  position: fixed;
+  top: 0;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background: var(--bg-color);
+  width: 100vw;
+  transition: 1s;
+  z-index: 10;
+}
+
+.hero-wrapper.small-size {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  text-transform: uppercase;
+  color: var(--primary);
+  font-size: 36px;
+  position: relative;
+  transition: 1s;
+}
+
+.hero.small-size {
+  transform: scale(0.5);
+}
+
+.logo-img {
+  width: 150px;
+  height: 150px;
+}
+
+.logo-text {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  animation: logo-fadeIn 1s;
+  animation-fill-mode: forwards;
+}
+
+.slogan {
+  font-size: 28px;
+  text-transform: none;
+  font-style: italic;
+}
+
+@media (max-width: 700px) {
+  .hero-wrapper {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  .hero {
+    font-size: 20px;
+  }
+  .slogan {
+    font-size: 20px;
+  }
+  .logo-img {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+@keyframes logo-fadeIn {
+  from {
+    transform: translate(-50%, 50px);
+    opacity: 0;
+  }
+  to {
+    transform: translate(-50%, 20px);
+    opacity: 1;
+  }
+}
